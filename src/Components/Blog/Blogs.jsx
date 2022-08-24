@@ -13,9 +13,9 @@ const Blogs = () => {
     return (
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
             {blogs
-                .filter(filterTitle)
                 .filter(filterAuthor)
                 .filter(filterCategory)
+                .filter(filterTitle)
                 .map((blog) => (
                     <Blog key={blog.id} blog={blog} />
                 ))}
