@@ -1,4 +1,5 @@
 import React from "react";
+import SearchImage from "../assets/search.svg";
 
 const Search = () => {
     return (
@@ -11,7 +12,7 @@ const Search = () => {
             />
             <img
                 class="inline h-6 cursor-pointer"
-                src="./assets/search.svg"
+                src={SearchImage}
                 alt="Search"
             />
         </div>
