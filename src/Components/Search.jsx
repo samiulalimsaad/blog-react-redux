@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import SearchImage from "../assets/search.svg";
 import { filterByTitle } from "../redux/filter/actions";
 
 const Search = () => {
-    const [input, setInput] = useState("");
+    const filters = useSelector((state) => state.filters);
+    const [input, setInput] = useState(filters.title);
     const [timeOutId, setTimeOutId] = useState(null);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        setInput(filters.title);
+    }, [filters.title]);
 
     const handleInput = (e) => {
         setInput(e.target.value);
