@@ -1,4 +1,4 @@
-export const blogs = [
+export const initialState = [
     {
         id: 1,
         title: "Occupant of anml-drn vehicle injured in collisn with same",

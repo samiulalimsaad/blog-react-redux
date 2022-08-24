@@ -25,7 +25,7 @@ const Blog = ({ blog }) => {
                     <div class="flex-shrink-0">
                         <img
                             class="h-10 w-10 rounded-full"
-                            src="https://avatars.githubusercontent.com/u/73503432?v=4"
+                            src={image}
                             alt=""
                         />
                     </div>
