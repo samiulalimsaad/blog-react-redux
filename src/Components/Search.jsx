@@ -8,19 +8,15 @@ const Search = () => {
     const [timeOutId, setTimeOutId] = useState(null);
     const dispatch = useDispatch();
 
-    const handleAuthorFilter = () => {
-        dispatch(filterByTitle(input));
-    };
-
     const handleInput = (e) => {
         setInput(e.target.value);
         if (timeOutId) {
             clearTimeout(timeOutId);
         }
-        const tId = setTimeout(() => {
-            console.log("called");
-            handleAuthorFilter();
-        }, 1500);
+        const tId = setTimeout(
+            () => dispatch(filterByTitle(e.target.value)),
+            1500
+        );
         setTimeOutId(tId);
     };
 
